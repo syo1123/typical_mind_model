@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/message.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    {% if title == "本館" %}
+    <link rel="stylesheet" href="../static/css/main_building.css">
+    {% elif title == "一号館" %}
+    <link rel="stylesheet" href="../static/css/building_1.css">
+    {% elif title == "二号館" %}
+    <link rel="stylesheet" href="../static/css/building_2.css">
+    {% elif title == "三号館" %}
+    <link rel="stylesheet" href="../static/css/building_3.css">
+    {% elif title == "図書館" %}
+    <link rel="stylesheet" href="../static/css/library.css">
+    {% elif title == "最終広場" %}
+    <link rel="stylesheet" href="../static/css/final.css">
+    {% endif %}
+    <title>{{title}}</title>
+</head>
+<body>
+    <div class="text-space">
+        <div class="balloon1-left">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+        <div class="circle">
+        <div class="return-button">
+            <button type="button" class="close" aria-label="Close" onClick="location.href='/turn_opening'">&times;</button>
+        </div>
+    </div>
+
+    {% if tourlist == "1" %}
+    <img src="./static/images/man.png" class="pos">
+    {% elif tourlist == "2" %}
+    <img src="./static/images/woman.png" class="pos">
+    {% elif tourlist == "3" %}
+    <img src="./static/images/man.png" class="pos">
+    {% elif tourlist == "4" %}
+    <img src="./static/images/woman.png" class="pos">
+    {% endif %}
+
+    <div class="emotions">
+        <div class="inner">
+            <input type="submit" class="btn btn-outline-dark bg-secondary btn-lg" name="final_return" onClick="location.href='/turn_opening'" value="ツアーを終了する" >
+        </div>
+    </div>
+
+    <script>
+        history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+  history.go(1);
+});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

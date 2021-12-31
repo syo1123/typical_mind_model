@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="emotions">
+    <div class="inner" id="all_button">
+        <form method="POST" action="{{ url_for('text_return') }}">
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="興味" >
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="関心" >
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="困惑" >
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="飽きた" >
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="楽しい" >
+        <input type="submit" class="btn btn-outline-light btn-outline-primary btn-lg" name="emotion" onClick="location.href='text_return'" value="眠い" >
+        </form>
+    </div>
+</div>
+
+<script>
+    history.pushState(null, null, location.href);
+window.addEventListener('popstate', (e) => {
+history.go(1);
+});   
+</script>
+<script>
+    function buttonClick(){
+        setTimeout(function(){
+    window.location.href = '/building_1';
+        }, 5*1000);}
+</script>
+
+{% if triger == "on" %}
+<script>
+    buttonClick()
+</script>
+{% endif %}
+{% endblock %}

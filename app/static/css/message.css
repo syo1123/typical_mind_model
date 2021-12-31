@@ -1,0 +1,32 @@
+.balloon1-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 250px;
+    padding: 25px 10px;
+    min-width: 1000px;
+    max-width: 100%;
+    color: #555;
+    font-size: 140%;
+    background: #e0edff;
+    border-radius: 15px;
+  }
+  
+  .balloon1-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+  }
+  
+  .balloon1-left p {
+    margin: 0;
+    padding: 0;
+  }
+
+.text-space{
+    position: absolute;
+    top: 530px;
+}

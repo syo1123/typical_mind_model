@@ -1,0 +1,112 @@
+/*
+======================================
+サイト全般レイアウト
+======================================
+*/
+/*リセットCSS*/
+*{
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    color: rgba(0,0,0,0.87);
+}
+.site-width{
+    width: 100%;
+}
+#main{
+    background-color: #fff;
+}
+
+/*
+======================================
+キャラクター選択画面
+======================================
+*/
+.characters-select-area img{
+    width: 280px;
+}
+.character-area{
+    float: left;
+}
+input[type=radio] {
+    display: none;/*ラジオボタンを見えないようにするCSS*/
+}
+.panel-ceo{
+    width: 300px;
+    display: inline-block;
+    padding: -50px;
+    box-sizing: border-box;
+}
+#container-top-characters{
+    margin: 0 auto;
+    padding:50px;
+    width: 100vw;
+    overflow: hidden;
+}
+#container-bottom-characters{
+    margin: 0 auto;
+    width: 66vw;
+    overflow: hidden;
+}
+.btn{
+    width: 50vw;
+    margin: 0 auto;
+    display: block;
+    font-size: 6vw;
+    bottom: 0;
+}
+.js-panel-select{
+    border: 5px rgba(0,0,0,0) solid;/*キャラクターパネルのデフォルトのCSS*/
+}
+.js-btn-prohibid{
+    background-color: gray;/*非活性のときのボタンのCSS*/
+}
+.js-btn-permit{
+    background-color: #6cb4e4 ;/*活性のときのボタンのCSS*/
+}
+
+
+
+h1 {
+    color: #6cb4e4;
+    text-align: center;
+    padding: 0.25em;
+    border-top: solid 2px #6cb4e4;
+    border-bottom: solid 2px #6cb4e4;
+    background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+    background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  }
+
+
+  .balloon1-left {
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 250px;
+    padding: 25px 10px;
+    min-width: 1000px;
+    max-width: 100%;
+    color: #555;
+    font-size: 140%;
+    background: #e0edff;
+    border-radius: 15px;
+  }
+  
+  /*.balloon1-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid #e0edff;
+  }*/
+  
+  .balloon1-left p {
+    margin: 0;
+    padding: 0;
+  }
+
+.text-space{
+    position: absolute;
+    top: 530px;
+}
