@@ -28,9 +28,7 @@
 .character-area{
     float: left;
 }
-input[type=radio] {
-    display: none;/*ラジオボタンを見えないようにするCSS*/
-}
+
 .panel-ceo{
     width: 300px;
     display: inline-block;
@@ -90,7 +88,7 @@ h1 {
     background: #e0edff;
     border-radius: 15px;
   }
-  
+
   /*.balloon1-left:before {
     content: "";
     position: absolute;
@@ -100,7 +98,7 @@ h1 {
     border: 15px solid transparent;
     border-right: 15px solid #e0edff;
   }*/
-  
+
   .balloon1-left p {
     margin: 0;
     padding: 0;

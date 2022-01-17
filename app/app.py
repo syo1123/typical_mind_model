@@ -10,6 +10,8 @@ current_place = None
 num_int = 0
 personal = None
 
+
+
 @app.route("/", methods=['GET'])
 def index():
     return render_template("index.html", message = '')
@@ -24,16 +26,16 @@ def main_building():
             personal = request.form.get('ceo-select')
         tourist_number=personal[num_int]
         if tourist_number =="1":
-            text = "ここは本館です"
+            text = "ここは本館一階のラーニングコモンズです。"
             return render_template("main_building.html", title = '本館', message = text, tourlist=tourist_number)
         elif tourist_number == "2":
-            text = "ここは本館ですわ"
+            text = "ここは本館一階のラーニングコモンズです。"
             return render_template("main_building.html", title = '本館', message = text, tourlist=tourist_number)
         elif tourist_number == "3":
-            text = "ここは本館なんだな"
+            text = "ここは本館一階のラーニングコモンズです。"
             return render_template("main_building.html", title = '本館', message = text, tourlist=tourist_number)
         elif tourist_number == "4":
-            text = "ここは本館なのよ"
+            text = "ここは本館一階のラーニングコモンズです。"
             return render_template("main_building.html", title = '本館', message = text, tourlist=tourist_number)
         else:
             return render_template("index.html")
@@ -44,16 +46,16 @@ def building_1():
     global current_place
     current_place = "一号館"
     if tourist_number == "1":
-        text = "ここは一号館です"
+        text = "ここは一号館で、正門から一番近い建物です。"
         return render_template("building_1.html", title = '一号館', message = text, tourlist=tourist_number)
     elif tourist_number == "2":
-        text = "ここは一号館ですわ"
+        text = "ここは一号館で、正門から一番近い建物です。"
         return render_template("building_1.html", title = '一号館', message = text, tourlist=tourist_number)
     elif tourist_number == "3":
-        text = "ここは一号館なんだな"
+        text = "ここは一号館で、正門から一番近い建物です。"
         return render_template("building_1.html", title = '一号館', message = text, tourlist=tourist_number)
     elif tourist_number == "4":
-        text = "ここは一号館なのよ"
+        text = "ここは一号館で、正門から一番近い建物です。"
         return render_template("building_1.html", title = '一号館', message = text, tourlist=tourist_number)
     else:
         return render_template("index.html")
@@ -64,16 +66,16 @@ def building_2():
     global current_place
     current_place = "二号館"
     if tourist_number == "1":
-        text = "ここは二号館です"
+        text = "ここは二号館で、教員の研究室があります。"
         return render_template("building_2.html", title = '二号館', message = text, tourlist=tourist_number)
     elif tourist_number == "2":
-        text = "ここは二号館ですわ"
+        text = "ここは二号館で、教員の研究室があります。"
         return render_template("building_2.html", title = '二号館', message = text, tourlist=tourist_number)
     elif tourist_number == "3":
-        text = "ここは二号館なんだな"
+        text = "ここは二号館で、教員の研究室があります。"
         return render_template("building_2.html", title = '二号館', message = text, tourlist=tourist_number)
     elif tourist_number == "4":
-        text = "ここは二号館なのよ"
+        text = "ここは二号館で、教員の研究室があります。"
         return render_template("building_2.html", title = '二号館', message = text, tourlist=tourist_number)
     else:
         return render_template("index.html")
@@ -84,16 +86,16 @@ def building_3():
     global current_place
     current_place = "三号館"
     if tourist_number == "1":
-        text = "ここは三号館です"
+        text = "ここは三号館で、学生は主にこの建物で授業を受けます。"
         return render_template("building_3.html", title = '三号館', message = text, tourlist=tourist_number)
     elif tourist_number == "2":
-        text = "ここは三号館ですわ"
+        text = "ここは三号館で、学生は主にこの建物で授業を受けます。"
         return render_template("building_3.html", title = '三号館', message = text, tourlist=tourist_number)
     elif tourist_number == "3":
-        text = "ここは三号館なんだな"
+        text = "ここは三号館で、学生は主にこの建物で授業を受けます。"
         return render_template("building_3.html", title = '三号館', message = text, tourlist=tourist_number)
     elif tourist_number == "4":
-        text = "ここは三号館なのよ"
+        text = "ここは三号館で、学生は主にこの建物で授業を受けます。"
         return render_template("building_3.html", title = '三号館', message = text, tourlist=tourist_number)
     else:
         return render_template("index.html")
